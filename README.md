@@ -35,3 +35,9 @@ Poll
 - Votes are persisted in localStorage and users can vote once per browser. An admin or user may reset the poll using the "Reset" button.
 
 This project was made possible by Visual Studio Code's Copilot feature
+
+# URL of website 
+https://eikouji.github.io/vs-code-copilot-project-2/task-manager/
+
+# Screenshot of working website 
+
