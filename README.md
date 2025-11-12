@@ -40,4 +40,4 @@ This project was made possible by Visual Studio Code's Copilot feature
 https://eikouji.github.io/vs-code-copilot-project-2/task-manager/
 
 # Screenshot of working website 
-
+<img width="1272" height="911" alt="Screenshot-Task-Manager-Copilot" src="https://github.com/user-attachments/assets/2ea48679-642e-4462-a4ed-20b8ad6332c1" />
