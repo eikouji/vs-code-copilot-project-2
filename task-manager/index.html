@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Task Manager</h1>
+      <p class="lead">Add, complete, and remove tasks — keyboard and screen reader friendly.</p>
+    </div>
+  </header>
+
+  <main class="container" id="main">
+    <section aria-labelledby="add-task-heading" class="task-input-section">
+      <h2 id="add-task-heading">Add a task</h2>
+
+      <form id="task-form" class="task-form" aria-label="Add new task">
+        <label for="task-input" class="visually-hidden">Task description</label>
+        <input id="task-input" name="task" type="text" placeholder="What needs to be done?" aria-required="true" aria-describedby="task-error" autocomplete="off" />
+        <div id="task-error" class="form-error" role="alert" aria-live="assertive" hidden></div>
+        <button type="submit" id="add-btn" disabled>Add</button>
+      </form>
+    </section>
+
+    <section aria-labelledby="tasks-heading" class="tasks-section">
+      <h2 id="tasks-heading">Tasks</h2>
+
+      <!-- Filter controls -->
+      <div class="filters" role="tablist" aria-label="Filter tasks">
+        <button class="filter-btn" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter-btn" data-filter="active" aria-pressed="false">Active</button>
+        <button class="filter-btn" data-filter="completed" aria-pressed="false">Completed</button>
+      </div>
+
+      <div id="no-tasks" class="no-tasks" aria-live="polite">No tasks yet — add your first task.</div>
+
+      <ul id="task-list" class="task-list" role="list" aria-live="polite"></ul>
+    </section>
+
+    <!-- Quick poll section -->
+    <section aria-labelledby="poll-heading" class="poll-section">
+      <h2 id="poll-heading">Quick poll</h2>
+      <div class="poll-box" id="poll-box">
+        <form id="poll-form" class="poll-form" aria-label="What should we focus on?">
+          <p class="poll-question">What should we focus on?</p>
+          <fieldset>
+            <legend class="visually-hidden">Choose one</legend>
+            <label class="poll-option"><input type="radio" name="poll" value="chores"> Chores</label>
+            <label class="poll-option"><input type="radio" name="poll" value="errands"> Errands</label>
+            <label class="poll-option"><input type="radio" name="poll" value="cleanup"> Clean up</label>
+          </fieldset>
+          <div class="poll-actions">
+            <button id="poll-vote" type="button">Vote</button>
+            <button id="poll-reset" type="button" class="quiet">Reset</button>
+          </div>
+        </form>
+
+        <div id="poll-results" class="poll-results" aria-live="polite" hidden>
+          <!-- results populated by JS -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Built with semantic HTML, accessible controls, and localStorage persistence.</p>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
