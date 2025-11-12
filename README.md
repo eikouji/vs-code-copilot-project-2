@@ -33,3 +33,5 @@ Filters
 Poll
 - A quick poll was added to the page where visitors can vote for one of three choices: Chores, Errands, or Clean up.
 - Votes are persisted in localStorage and users can vote once per browser. An admin or user may reset the poll using the "Reset" button.
+
+This project was made possible by Visual Studio Code's Copilot feature
